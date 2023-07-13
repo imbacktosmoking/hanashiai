@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<style>
+
+    body{
+        background-color: rgb(59, 59, 188);
+    }
+</style>
+<title> 「話し合い、他の人と話す場所です！」 </title>
+
+
+<h1> Welcome to hanashiai! / 「ハナシアイへようこそ！」へのアクセス方法を以下に示します。 </h1>
+
+<li>
+    <a href="{% url 'submit_post'%}"> Add a post/</a>
+
+</li>
+
+{% for post in object_list %}
+<li>{{post.title}} - {{post.author}}
+{{post.body}}</li>
+{% endfor %}
+
+
+
+
+</body>
+</body>
+</html>
